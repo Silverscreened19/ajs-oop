@@ -1,5 +1,5 @@
 import Character from '../characters';
-import Magician from '../magician'
+import Magician from '../magician';
 
 test('create character', () => {
   const result = new Character('Ally', 'Magician');
