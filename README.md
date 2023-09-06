@@ -1,5 +1,7 @@
 # Домашнее задание к лекции «Классы, наследование»
 
+[![Build status](https://ci.appveyor.com/api/projects/status/2keesi8dr9sy49aw?svg=true)](https://ci.appveyor.com/project/Silverscreened19/ajs-oop)
+
 **Важно**: каждая задача выполняется в виде отдельного проекта с собственным GitHub репозиторием.
 
 **Важно**: код должен проходить ESLint без ошибок.
