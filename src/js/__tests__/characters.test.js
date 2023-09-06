@@ -14,19 +14,19 @@ test('create character', () => {
 });
 
 test('name too short', () => {
-  expect(() => new Character('A', 'Daemon', 10, 40)).toThrow('Invalid name length');
+  expect(() => new Character('A', 'Daemon')).toThrow('Invalid name length');
 });
 
 test('name too long', () => {
-  expect(() => new Character('Aegfgweiusdvdfhe', 'Daemon', 10, 40)).toThrow('Invalid name length');
+  expect(() => new Character('Aegfgweiusdvdfhe', 'Daemon')).toThrow('Invalid name length');
 });
 
 test('ivalid character type', () => {
-  expect(() => new Character('Ally', 'Dark elf', 10, 40)).toThrow('Invalid character type');
+  expect(() => new Character('Ally', 'Dark elf')).toThrow('Invalid character type');
 });
 
 test('Magician level up function', () => {
-  const result = new Magician('Ally', 'Magician', 10, 40);
+  const result = new Magician('Ally');
   result.levelUp();
   expect(result).toEqual({
     name: 'Ally',
@@ -39,7 +39,7 @@ test('Magician level up function', () => {
 });
 
 test('Magician level up function on dead character', () => {
-  const result = new Magician('Ally', 'Magician', 10, 40);
+  const result = new Magician('Ally');
   result.health = 0;
   expect(() => {
     result.levelUp();
@@ -47,7 +47,7 @@ test('Magician level up function on dead character', () => {
 });
 
 test('damage function on Magician', () => {
-  const result = new Magician('Ally', 'Magician', 10, 40);
+  const result = new Magician('Ally');
   result.damage(20);
   expect(result).toEqual({
     name: 'Ally',
@@ -59,8 +59,8 @@ test('damage function on Magician', () => {
   });
 });
 
-test('damage function on dead character', () => {
-  const result = new Character('Ally', 'Magician', 10, 40);
+test('damage function on dead Magician', () => {
+  const result = new Magician('Ally');
   result.health = 0;
   result.damage(20);
   expect(result.health).toEqual(0);
