@@ -14,8 +14,6 @@
             "error",
             "LabeledStatement",
             "WithStatement"
-          ],
-          "no-param-reassign": 0,
-          "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }]
+          ]
     }
 }
